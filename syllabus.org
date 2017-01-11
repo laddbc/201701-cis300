@@ -1,0 +1,784 @@
+#+TITLE: Syllabus for  CIS 300 Foundations of Computer Science
+#+AUTHOR: Brian C. Ladd
+#+DATE: Spring 2016
+#+STARTUP: showall
+#+TODO: TODO COLLECTED | GRADED
+#+TODO: TODO | DONE
+
+* Course details
+  :PROPERTIES:
+  :VISIBILITY: folded
+  :END:
+
+- Course: CIS 300 Foundations of Computer Science
+
+- Instructor: Dr Brian C. Ladd <[[mailto:laddbc@potsdam.edu]]>
+  301 Dunn Hall
+- Teaching Assistant
+  - Eli Auslander <[[mailto:auslanem196@potsdam.edu]]>
+
+- Textbook: Rosen, _Discrete Mathematics and Its Applications, 7E_
+
+- Notes and the like: This course will be using techela (pronounced "tequela"), an Emacs package from CMU that supports making assignments, grading assignments, and even viewing equations right in the editor. This is *experimental* for me (hence only using it in this course).
+  - So, you have access to a virtual machine image [[TBD]] that has git, emacs, and techela installed. You are not required to use this setup; you are required to turn in homework in appropriately named repositories for grading.
+  - Notice: You are going to learn how to typeset equations using LaTeX markup. Yes, that may stand between you and the material for a little while, but readability for graders is much, much better with typesetting.
+
+
+** Course description - Foundations of Computer Science
+
+An introduction to the logical and quantitative foundations of computer science. Topics include introductions to: formal proof techniques, logic, sets, relations, partial order, number systems, combinatorics, graphs and trees, and matrix arithmetic. Prerequisites: CIS 201. Spring.
+
+** Course objectives
+
+
+
+** Grading
+
+#+caption: Categories and weights for graded
+#+tblname: categories
+| Category | weight |
+|----------+--------|
+| homework |   0.20 |
+| quiz     |   0.05 |
+| exam1    |   0.05 |
+| exam2    |   0.10 |
+| exam3    |   0.15 |
+| exam4    |   0.20 |
+| final    |   0.25 |
+
+
+Homeworks will be assigned about three times a week. Each assignment will typically be one to four problems requiring up to an hour to complete.
+
+Quizzes will be given in class. You should be prepared to take a quiz at any time. These will typically be short, timed problems.
+
+Exams will be scheduled and given during class. You will need your computer for these.
+
+You should bring your computer to class every day. You will need it to follow the lecture notes, to participate in class exercises, and to complete quizzes and exams. You are responsible for ensuring the battery is charged, that you can connect to the internet, and that the software required for the course is installed and working. There will not be any makeup assignments.
+
+Late assignments will automatically lose 50% of their points. Late assignments can only be turned in by email.
+
+*** Grading criteria
+
+You are transitioning into a young professional at this point. That means assignments are done professionally too. In addition to the technical correctness of your work, we will also be assessing the professionalism with which it is presented. Each assignment will show the rubric it will be graded with at the top of the file.
+
+There will be a straight scale (no curve) so you will always know exactly what your grade is at all times. Each problem will be graded considering the approach used, the correctness of the answer, the neatness and quality of presentation, etc... Each category of the rubric will be given a letter grade that indicates your level of performance in that category.
+
+"A" work has the following characteristics: The correct approach is used and the problem is set up correctly. The work is not over-simplified and it is easy to see it is done correctly. Any assumptions made were stated and justified. The answers are correct or only the most trivial errors are present, and were identified by the student. All of the correct units were used. The presentation is complete, clear, logical, neat and in order. Error analysis was performed if appropriate. Any figures used have properly labeled axes with units, and a legend if there is more than one curve. Essentially everything that should have been done was done and done correctly. This is the kind of work an employer wants their employees to do, and the kind of work you will be promoted for doing. You should be proud of this work.
+
+"B" work is deficient in one or more of the properties of "A" work. It might be basically right, but essential details are missing such as units, or the presentation is sloppy. You will get by with this kind of work, but you should not expect to be praised for it.
+
+"C" quality work is deficient in more than two of the properties of "A" work. You would probably not get fired for this kind of work, but you may be notified you need to improve and you should not expect any kind of promotion. This is the bare minimum of expected performance.
+
+"D" work is not considered acceptable performance. Repeat offenses could lead to the loss of your job.
+
+"R" work is totally unacceptable performance. You will be fired.
+
+plus/minus modifiers will be used to provide finer grained grades.
+
+Each problem will have a point value associated with it. The letter grade you get serves as a multiplier on that point value. The multipliers are:
+
+| Lettergrade | multiplier |
+|-------------+------------|
+| A++         |          1 |
+| A+          |       0.95 |
+| A           |        0.9 |
+| A-          |       0.85 |
+| A/B         |        0.8 |
+| B+          |       0.75 |
+| B           |        0.7 |
+| B-          |       0.65 |
+| B/C         |        0.6 |
+| C+          |       0.55 |
+| C           |        0.5 |
+| C-          |       0.45 |
+| C/D         |        0.4 |
+| D+          |       0.35 |
+| D           |        0.3 |
+| D-          |       0.25 |
+| D/R         |        0.2 |
+| R+          |       0.15 |
+| R           |        0.1 |
+| R-          |       0.05 |
+| R- -        |        0.0 |
+
+At the end of the semester I will calculate what fraction of the possible points you have earned, and your grade will be based on this distribution:
+
+| 80% >= grade         | A |
+| 60% >= grade < 80    | B |
+| 40% >= grade < 60    | C |
+| 20% >= grade < 40    | D |
+| grade < 20%          | R |
+
+Note that the standard grade for correct work is an "A", which is not equal to "100%". It is worth 90%, which is well above the cutoff for an A. The A+ and A++ designations are reserved for work that is well above "correct".
+
+** Academic honesty
+All work is expected to be your original work. You may work with class members to solve the homework problems, but you must turn in your own solutions. It is cheating to turn in someone else's work as your own. If you use code from the internet or the course notes, you should note this in your solution. Duplicated assignments (e.g. two students who turn in the same work) will receive zeros and a warning. Repeat offenses will be reported as academic dishonesty.
+
+When in doubt, review this website: http://www.cmu.edu/academic-integrity/, and ask if anything is unclear /before/ you get in trouble. In particular see these sites:
+  - http://www.cmu.edu/academic-integrity/collaboration/index.html
+  - http://www.cmu.edu/academic-integrity/cheating/index.html
+  - http://www.cmu.edu/academic-integrity/plagiarism/index.html
+
+** Religious holidays
+We will accommodate religious holidays when possible. If your work will be affected by a religious holiday, you must inform Professor Kitchin as early as possible to work out an accommodation in advance.
+
+** Take care of yourself
+Do your best to maintain a healthy lifestyle this semester by eating well, exercising, avoiding drugs and alcohol, getting enough sleep and taking some time to relax. This will help you achieve your goals and cope with stress.
+
+All of us benefit from support during times of struggle. You are not alone. There are many helpful resources available on campus and an important part of the college experience is learning how to ask for help. Asking for support sooner rather than later is often helpful.
+
+If you or anyone you know experiences any academic stress, difficult life events, or feelings like anxiety or depression, we strongly encourage you to seek support. Counseling and Psychological Services (CaPS) is here to help: call 412-268-2922 and visit their website at http://www.cmu.edu/counseling/. Consider reaching out to a friend, faculty or family member you trust for help getting connected to the support that can help.
+
+If you or someone you know is feeling suicidal or in danger of self-harm, call someone immediately, day or night:
+
+CaPS: 412-268-2922
+
+Re:solve Crisis Network: 888-796-8226
+
+If the situation is life threatening, call the police:
+
+           On campus: CMU Police: 412-268-2323
+
+           Off campus: 911
+
+If you have questions about this or your coursework, please let me know.
+
+* Announcements
+
+* Class schedule
+  :PROPERTIES:
+  :CUSTOM_ID: schedule
+  :END:
+
+** TODO <2017-01-23 Mon 13:00>
+** TODO <2017-01-24 Tue 14:00>
+** TODO <2017-01-25 Wed 13:00>
+** TODO <2017-01-27 Fri 13:00>
+
+
+** TODO <2017-01-30 Mon 13:00>
+** TODO <2017-01-31 Tue 14:00>
+** TODO <2017-02-01 Wed 13:00>
+** TODO <2017-02-03 Fri 13:00>
+
+
+** TODO <2017-02-06 Mon 13:00>
+** TODO <2017-02-07 Tue 14:00>
+** TODO <2017-02-08 Wed 13:00>
+** TODO <2017-02-10 Fri 13:00>
+
+
+** TODO <2017-02-13 Mon 13:00>
+** TODO <2017-02-14 Tue 14:00>
+** TODO <2017-02-15 Wed 13:00>
+** TODO <2017-02-17 Fri 13:00>
+
+
+** TODO <2017-02-22 Wed 13:00>
+** TODO <2017-02-24 Fri 13:00>
+
+
+** TODO <2017-02-27 Mon 13:00>
+** TODO <2017-02-28 Tue 14:00>
+** TODO <2017-03-01 Wed 13:00>
+** TODO <2017-03-03 Fri 13:00>
+
+
+** TODO <2017-03-06 Mon 13:00>
+** TODO <2017-03-07 Tue 14:00>
+** TODO <2017-03-08 Wed 13:00>
+** TODO <2017-03-10 Fri 13:00>
+
+
+** TODO <2017-03-13 Mon 13:00>
+** TODO <2017-03-14 Tue 14:00>
+** TODO <2017-03-15 Wed 13:00>
+** TODO <2017-03-17 Fri 13:00>
+
+** TODO <2017-03-20 Mon 13:00>
+** TODO <2017-03-21 Tue 14:00>
+** TODO <2017-03-22 Wed 13:00>
+** TODO <2017-03-24 Fri 13:00>
+
+** TODO <2017-04-03 Mon 13:00>
+** TODO <2017-04-04 Tue 14:00>
+** TODO <2017-04-05 Wed 13:00>
+** TODO <2017-04-07 Fri 13:00>
+
+
+** TODO <2017-04-10 Mon 13:00>
+** TODO <2017-04-11 Tue 14:00>
+** TODO <2017-04-12 Wed 13:00>
+** TODO <2017-04-14 Fri 13:00>
+
+
+** TODO <2017-04-17 Mon 13:00>
+** TODO <2017-04-18 Tue 14:00>
+** TODO <2017-04-19 Wed 13:00>
+** TODO <2017-04-21 Fri 13:00>
+
+
+** TODO <2017-04-24 Mon 13:00>
+** TODO <2017-04-25 Tue 14:00>
+** TODO <2017-04-26 Wed 13:00>
+** TODO <2017-04-28 Fri 13:00>
+
+
+** TODO <2017-05-01 Mon 13:00>
+** TODO <2017-05-02 Tue 14:00>
+** TODO <2017-05-03 Wed 13:00>
+** TODO <2017-05-05 Fri 13:00>
+
+
+** TODO <2017-05-08 Mon 13:00>
+** TODO <2017-05-09 Tue 14:00>
+** TODO <2017-05-10 Wed 13:00>
+** TODO <2017-05-12 Fri 13:00>
+
+
+** TODO <2017-05-16 Tue 08:00>
+
+* Assignments
+  :PROPERTIES:
+  :CUSTOM_ID: assignments
+  :END:
+
+  [[elisp:tq-agenda][Upcoming assignments]]
+
+** GRADED assignment:intro					 :assignment:
+   CLOSED: [2016-09-04 Sun 17:46] DEADLINE: <2016-09-01 Thu>
+   :PROPERTIES:
+   :CATEGORY: participation
+   :POINTS:   2
+   :CUSTOM_ID: intro
+   :RUBRIC:   (("participation" . 1.0))
+   :END:
+
+
+** GRADED assignment:survey					 :assignment:
+   CLOSED: [2016-09-10 Sat 12:51] DEADLINE: <2016-09-07 Wed>
+   :PROPERTIES:
+   :CATEGORY: participation
+   :POINTS:   1
+   :CUSTOM_ID: survey
+   :RUBRIC:   (("participation" . 1.0))
+   :END:
+
+solution:survey
+
+** GRADED assignment:parabola					 :assignment:
+   CLOSED: [2016-09-14 Wed 13:52] DEADLINE: <2016-09-08 Thu>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   2
+   :CUSTOM_ID: parabola
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:parabola
+
+** GRADED assignment:ode-3					 :assignment:
+   CLOSED: [2016-09-18 Sun 19:41] DEADLINE: <2016-09-13 Tue>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   2
+   :CUSTOM_ID: ode-3
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:ode-3
+
+** GRADED assignment:batch-1					 :assignment:
+   CLOSED: [2016-09-17 Sat 16:50] DEADLINE: <2016-09-16 Fri>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   2
+   :CUSTOM_ID: batch-1
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:batch-1
+
+** GRADED assignment:cstr-1					 :assignment:
+   CLOSED: [2016-09-21 Wed 10:36] DEADLINE: <2016-09-19 Mon>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   2
+   :CUSTOM_ID: cstr-1
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:cstr-1
+
+** GRADED assignment:two-species-rate				 :assignment:
+   CLOSED: [2016-09-26 Mon 15:37] DEADLINE: <2016-09-20 Tue>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   2
+   :CUSTOM_ID: two-species-rate
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:two-species-rate
+
+** GRADED assignment:levenspiel					 :assignment:
+   CLOSED: [2016-09-25 Sun 19:32] DEADLINE: <2016-09-21 Wed>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   2
+   :CUSTOM_ID: levenspiel
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+v0 = 0.66 L/hr
+
+For the PFR: \(V =  \int_0^V \frac{F_{A0}}{-r_A} dX\)
+
+solution:levenspiel
+
+** GRADED assignment:transient-cstr				 :assignment:
+   CLOSED: [2016-09-28 Wed 14:43] DEADLINE: <2016-09-23 Fri>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   2
+   :CUSTOM_ID: transient-cstr
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:transient-cstr
+
+** GRADED assignment:membrane-1					 :assignment:
+   CLOSED: [2016-09-29 Thu 18:43] DEADLINE: <2016-09-27 Tue>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   3
+   :CUSTOM_ID: membrane-1
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:membrane-1
+
+** GRADED assignment:practice-quiz-1				 :assignment:
+   CLOSED: [2016-09-29 Thu 00:46] DEADLINE: <2016-09-27 Tue>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   2
+   :CUSTOM_ID: practice-quiz-1
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:practice-quiz-1
+
+** GRADED assignment:practice-exam-1				 :assignment:
+   CLOSED: [2016-10-11 Tue 21:03] DEADLINE: <2016-09-28 Wed>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   2
+   :CUSTOM_ID: practice-exam-1
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:practice-exam-1
+
+** GRADED assignment:quiz-1					 :assignment:
+   CLOSED: [2016-09-28 Wed 18:58] DEADLINE: <2016-09-28 Wed>
+   :PROPERTIES:
+   :CATEGORY: quiz
+   :POINTS:   2
+   :CUSTOM_ID: quiz-1
+   :RUBRIC:   (("participation" . 1.0))
+   :END:
+
+solution:quiz-1
+
+** GRADED assignment:quiz-2					 :assignment:
+   CLOSED: [2016-10-10 Mon 15:04] DEADLINE: <2016-10-03 Mon>
+   :PROPERTIES:
+   :CATEGORY: quiz
+   :POINTS:   3
+   :CUSTOM_ID: quiz-2
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:quiz-2
+
+
+** GRADED assignment:exam-1-1					 :assignment:
+   CLOSED: [2016-10-10 Mon 22:05] DEADLINE: <2016-10-05 Wed>
+   :PROPERTIES:
+   :CATEGORY: exam1
+   :POINTS:   4
+   :CUSTOM_ID: exam-1-1
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:exam-1-1
+
+solution:exam-1-1
+** GRADED assignment:exam-1-2					 :assignment:
+   CLOSED: [2016-10-09 Sun 00:42] DEADLINE: <2016-10-05 Wed>
+   :PROPERTIES:
+   :CATEGORY: exam1
+   :POINTS:   4
+   :CUSTOM_ID: exam-1-2
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:exam-1-2
+
+solution:exam-1-2
+** GRADED assignment:exam-1-3					 :assignment:
+   CLOSED: [2016-10-07 Fri 16:38] DEADLINE: <2016-10-05 Wed>
+   :PROPERTIES:
+   :CATEGORY: exam1
+   :POINTS:   3
+   :CUSTOM_ID: exam-1-3
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+
+solution:exam-1-3
+
+** GRADED assignment:exam-1-4					 :assignment:
+   CLOSED: [2016-10-09 Sun 03:55] DEADLINE: <2016-10-05 Wed>
+   :PROPERTIES:
+   :CATEGORY: exam1
+   :POINTS:   3
+   :CUSTOM_ID: exam-1-4
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+
+solution:exam-1-4
+
+** GRADED assignment:survey-2					 :assignment:
+   CLOSED: [2016-10-11 Tue 18:43] DEADLINE: <2016-10-10 Mon>
+   :PROPERTIES:
+   :CATEGORY: participation
+   :POINTS:   2
+   :CUSTOM_ID: survey-2
+   :RUBRIC:   (("participation" . 1.0))
+   :END:
+
+
+solution:survey-2
+
+** GRADED assignment:nh3-equil					 :assignment:
+   CLOSED: [2016-10-18 Tue 00:24] DEADLINE: <2016-10-13 Thu>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   2
+   :CUSTOM_ID: nh3-equil
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:nh3-equil
+
+solution:nh3-equil
+solution:nh3-equil
+solution:nh3-equil
+** assignment:nh3-decomp					   :practice:
+
+
+** GRADED assignment:survey-3					 :assignment:
+   CLOSED: [2016-10-24 Mon 21:01] DEADLINE: <2016-10-17 Mon>
+   :PROPERTIES:
+   :CATEGORY: participation
+   :POINTS:   1
+   :CUSTOM_ID: survey-3
+   :RUBRIC:   (("participation" . 1.0))
+   :END:
+
+
+
+** GRADED assignment:creative-1					 :assignment:
+   CLOSED: [2016-10-20 Thu 16:59] DEADLINE: <2016-10-17 Mon>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   3
+   :CUSTOM_ID: creative-1
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+
+** GRADED assignment:regress-1					 :assignment:
+   CLOSED: [2016-10-19 Wed 01:55] DEADLINE: <2016-10-18 Tue>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   2
+   :CUSTOM_ID: regress-1
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+
+solution:regress-1 [[./solutions/regress-1/regress-1.org]]
+
+** GRADED assignment:regress-2					 :assignment:
+   CLOSED: [2016-10-24 Mon 00:06] DEADLINE: <2016-10-19 Wed>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   4
+   :CUSTOM_ID: regress-2
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+
+solution:regress-2 [[./solutions/regress-2/regress-2.org]]
+
+** GRADED assignment:regress-3					 :assignment:
+   CLOSED: [2016-10-23 Sun 22:20] DEADLINE: <2016-10-20 Thu>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   2
+   :CUSTOM_ID: regress-3
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+
+solution:regress-3 [[./solutions/regress-3/regress-3.org]]
+
+** GRADED assignment:regress-4					 :assignment:
+   CLOSED: [2016-10-24 Mon 12:00] DEADLINE: <2016-10-21 Fri>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   3
+   :CUSTOM_ID: regress-4
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+solution:regress-4  [[./solutions/regress-4/regress-4.org]]
+
+** Graded assignment:debugging					 :assignment:
+   CLOSED: [2016-10-25 Tue 16:35] DEADLINE: <2016-10-19 Wed>
+   :PROPERTIES:
+   :CATEGORY: participation
+   :POINTS:   2
+   :CUSTOM_ID: debugging
+   :RUBRIC:   (("participation" . 1.0))
+   :END:
+
+solution:debugging  [[./solutions/debugging/debugging.org]]
+
+solution:debugging
+** GRADED assignment:survey-emacs-shortcuts			 :assignment:
+   CLOSED: [2016-10-24 Mon 13:01] DEADLINE: <2016-10-19 Wed>
+   :PROPERTIES:
+   :CATEGORY: participation
+   :POINTS:   1
+   :CUSTOM_ID: survey-emacs-shortcuts
+   :RUBRIC:   (("participation" . 1.0))
+   :END:
+
+new template for code blocks.
+#+BEGIN_SRC emacs-lisp :results silent
+(add-to-list 'org-structure-template-alist
+	     '("Py" "#+BEGIN_SRC python :results output org drawer
+import numpy as np
+import matplotlib.pyplot as plt
+import pycse.orgmode as org
+from scipy.optimize import fsolve
+from scipy.integrate import odeint
+from pycse import odelay
+
+?
+\n#+END_SRC"
+	       "<src lang=\"python\">\n?\n</src>"))
+#+END_SRC
+
+
+Change how links get opened.
+#+BEGIN_SRC emacs-lisp
+(setf (cdr (assoc 'file org-link-frame-setup)) 'find-file)
+#+END_SRC
+
+#+RESULTS:
+: find-file
+
+Turn on automatic bracket matching
+#+BEGIN_SRC emacs-lisp
+(electric-pair-mode 1)
+#+END_SRC
+
+#+RESULTS:
+: t
+
+#+BEGIN_SRC emacs-lisp
+(defun oscratch ()
+ (interactive)
+ (switch-to-buffer "*Oh scratch, no you didn't*")
+ (org-mode))
+#+END_SRC
+
+#+RESULTS:
+: oscratch
+
+
+autopep8
+
+Needs to have autopep8 installed in python
+I think it is
+#+BEGIN_SRC sh
+pip install autopep8
+#+END_SRC
+
+#+RESULTS:
+| Requirement | already | satisfied | (use | --upgrade | to | upgrade): | autopep8    | in | /Users/jkitchin/anaconda3/lib/python3.5/site-packages |       |           |
+| Requirement | already | satisfied | (use | --upgrade | to | upgrade): | pep8>=1.5.7 | in | /Users/jkitchin/anaconda3/lib/python3.5/site-packages | (from | autopep8) |
+
+M-x autopep8
+#+BEGIN_SRC python :results output org drawer
+a = 4  # bad comment
+b = 5
+c = a + 5 * b - a * 6 / 34
+d = (3, 4, 5, 6, 7, 8)
+
+
+def f(x, y, z):
+    return x * y * z
+
+print(c)
+#+END_SRC
+
+C-u C-u C-c C-x C-l to make latex images in whole buffer
+
+** assignment:free-energy-regression
+
+
+** GRADED assignment:creative-2                                  :assignment:
+   CLOSED: [2016-11-08 Tue 23:09] DEADLINE: <2016-10-28 Fri>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   3
+   :CUSTOM_ID: creative-2
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+
+** GRADED assignment:quiz-3                                      :assignment:
+   CLOSED: [2016-11-19 Sat 14:32] DEADLINE: <2016-10-26 Wed>
+   :PROPERTIES:
+   :CATEGORY: quiz
+   :POINTS:   2
+   :CUSTOM_ID: quiz-3
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+
+solution:quiz-3  or: [[./solutions/quiz-3/quiz-3.org]]
+
+
+** GRADED assignment:exam-2-1					 :assignment:
+   CLOSED: [2016-11-08 Tue 01:51] DEADLINE: <2016-11-02 Wed>
+   :PROPERTIES:
+   :CATEGORY: exam2
+   :POINTS:   3
+   :CUSTOM_ID: exam-2-1
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+[[./solutions/exam-2-1/exam-2-1.org]]
+
+** GRADED assignment:exam-2-2					 :assignment:
+   CLOSED: [2016-11-17 Thu 02:57] DEADLINE: <2016-11-02 Wed>
+   :PROPERTIES:
+   :CATEGORY: exam2
+   :POINTS:   3
+   :CUSTOM_ID: exam-2-2
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+[[./solutions/exam-2-2/exam-2-2.org]]
+
+** GRADED assignment:exam-2-3					 :assignment:
+   CLOSED: [2016-11-06 Sun 17:03] DEADLINE: <2016-11-02 Wed>
+   :PROPERTIES:
+   :CATEGORY: exam2
+   :POINTS:   3
+   :CUSTOM_ID: exam-2-3
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+[[./solutions/exam-2-3/exam-2-3.org]]
+
+** GRADED assignment:eb-batch-1					 :assignment:
+   CLOSED: [2016-11-28 Mon 17:18] DEADLINE: <2016-11-22 Tue>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   3
+   :CUSTOM_ID: eb-batch-1
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+[[./solutions/eb-batch-1/eb-batch-1.org]]
+
+** GRADED assignment:quiz-4                                      :assignment:
+   CLOSED: [2016-11-22 Tue 06:21] DEADLINE: <2016-11-21 Mon>
+   :PROPERTIES:
+   :CATEGORY: quiz
+   :POINTS:   2
+   :CUSTOM_ID: quiz-4
+   :RUBRIC:   multiple-choice
+   :END:
+
+[[./solutions/quiz-4/quiz-4.org]]
+
+** GRADED assignment:eb-cstr					 :assignment:
+   CLOSED: [2016-12-05 Mon 15:27] DEADLINE: <2016-11-30 Wed>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   4
+   :CUSTOM_ID: eb-cstr
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+[[./solutions/eb-cstr/eb-cstr.org]]
+
+** GRADED assignment:eb-rev-pdrop                                :assignment:
+   CLOSED: [2016-12-15 Thu 08:14] DEADLINE: <2016-12-01 Thu>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   4
+   :CUSTOM_ID: eb-rev-pdrop
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+[[./solutions/eb-rev-pdrop/eb-rev-pdrop.org]]
+
+** GRADED assignment:eb-cyclohexene.org				 :assignment:
+   CLOSED: [2016-12-09 Fri 17:22] DEADLINE: <2016-12-05 Mon>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   4
+   :CUSTOM_ID: eb-cyclohexene.org
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+
+** GRADED assignment:exam-3-1					 :assignment:
+   CLOSED: [2016-12-12 Mon 02:10] DEADLINE: <2016-12-07 Wed>
+   :PROPERTIES:
+   :CATEGORY: exam3
+   :POINTS:   5
+   :CUSTOM_ID: exam-3-1
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+
+** GRADED assignment:exam-3-2					 :assignment:
+   CLOSED: [2016-12-11 Sun 17:07] DEADLINE: <2016-12-07 Wed>
+   :PROPERTIES:
+   :CATEGORY: exam3
+   :POINTS:   5
+   :CUSTOM_ID: exam-3-2
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
+
+** GRADED assignment:exam-3-3					 :assignment:
+   CLOSED: [2016-12-12 Mon 15:32] DEADLINE: <2016-12-07 Wed>
+   :PROPERTIES:
+   :CATEGORY: exam3
+   :POINTS:   5
+   :CUSTOM_ID: exam-3-3
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
