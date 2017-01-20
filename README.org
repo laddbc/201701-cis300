@@ -1,0 +1,7 @@
+#+TITLE: CIS 300 Foundations of Computer Science
+#+AUTHOR: Brian C. Ladd
+#+DATE: Spring 2017
+
+This repository is for the course titled above, SUNY Potsdam Computer Science Department.
+
+See the [[./syllabus.org][Syllabus]].

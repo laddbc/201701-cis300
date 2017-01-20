@@ -1,0 +1,10 @@
+#+STARTUP: showall
+
+
+* the effective diffusion coefficient is defined as:
+
+\[D_e = \frac{D_{AB} \phi_p \sigma_c}{\tau}\]
+
+** where $D_{AB}$ is the normal gas phase diffusivity
+** \phi_p is the pellet porosity (void volume / total volume)
+** \sigma_c is the constriction factor, which is ratio of the smallest radius in the pores to the largest radius
