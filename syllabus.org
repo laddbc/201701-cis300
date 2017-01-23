@@ -287,3 +287,13 @@ All of us benefit from support during times of struggle. You are not alone. Ther
   :END:
 
   [[elisp:tq-agenda][Upcoming assignments]]
+
+** TODO assignment:rosen1.1-2-8 :assignment:
+   DEADLINE: <2017-02-01 Wed>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   10
+   :CUSTOM_ID: rosen1.1-2-8
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
