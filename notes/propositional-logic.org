@@ -1,10 +1,224 @@
 #+STARTUP: showall
 
 
-* the effective diffusion coefficient is defined as:
+* A *proposition* is a statement that is either _true_ or _false_; not possibly both or neither.
+** Propositions
+*** "Joseph Stalin is a Catholic Saint."
+*** "The _Superbowl_ is an American football game."
+*** What truth value does each have?
+** *Not* Propositions
+*** "What time is it?"
+*** "$x$ is an even number."
+*** Why is each not a proposition?
+** A proposition is a statement with a *truth value* or a *Boolean value*
+*** Boolean is for George Boole, 19th Century English mathematician who studied algebras over sets with two values.
+** Propositions are represented using lower-case variables from the middle of the alphabet: $p, q, r$
 
-\[D_e = \frac{D_{AB} \phi_p \sigma_c}{\tau}\]
+* Operators
+** Analogy: integral operators
+*** Integers can be modified by the application of operators:
+**** -17 modifies 17 to be its additive inverse
+***** This is an example of a *unary* operator.
+**** $x + y$ adds the value of $x$ and $y$, just as $x * y$ multiplies them.
+***** These are examples of *binary* operators.
+*** The value of an operator can be shown in a table:
+| $x$ | $-x$ |
+|   0 |    0 |
+|   1 |   -1 |
+|  -1 |    1 |
+| ... |      |
 
-** where $D_{AB}$ is the normal gas phase diffusivity
-** \phi_p is the pellet porosity (void volume / total volume)
-** \sigma_c is the constriction factor, which is ratio of the smallest radius in the pores to the largest radius
+| $x$ | $y$ | $x + y$ |
+|   1 |   1 |       2 |
+|   4 |  -7 |      -3 |
+| ... |     |         |
+**** As indicated by the ellipses, these tables need to include all the possible values for all of the variables to be considered complete.
+**** Also noticeable in the examples, an ordered table (as in the first), is typically easier to read.
+
+** Truth Tables
+*** When working with Boolean values, the operator value table is called a *truth table*.
+*** There is a column for each variable and an additional column for the operator expression (which can be of arbitrary complexity).
+*** There is a row for each unique _combination_ of values the variables can assume.
+**** Since each variable can appear as T or F (similarly: 1, 0), a group of $n$ variables has $2^n$ combinations
+**** A truth-table for a function with $n$ variables has $2^n$ rows.
+
+* Boolean Operators
+** Not $\lnot$
+*** $\lnot p$ is the logical inverse of $p$
+| $p$ | $\lnot p$ |
+| T   | F         |
+| F   | T         |
+**** 1 variable implies 2 rows.
+**** Written in LaTeX with \lnot (logical not)
+| $p$       | It is raining.                         |
+| $\lnot p$ | It is not the case that it is raining. |
+
+** And $\land$
+*** The *conjunction* of two Boolean values is true when both Boolean expressions it joins are true and false otherwise.
+| $p$ | $q$ | $p \land q$ |
+| F   | F   | F           |
+| F   | T   | F           |
+| T   | F   | F           |
+| T   | T   | T           |
+**** 2 variables; 4 (or 2^2) rows.
+**** Written in LaTeX with \land (logical and)
+| $p$         | It is raining.                |
+| $q$         | It is cold.                   |
+| $p \land q$ | It is raining and it is cold. |
+
+** Or $\lor$
+*** The *disjunction* of two Boolean values is true when either one or both of the joined Boolean expressions is true.
+**** Note: *either* or *both*; this is an *inclusive or* (it includes the and case)
+| $p$ | $q$ | $p \lor q$ |
+| F   | F   | F          |
+| F   | T   | T          |
+| T   | F   | T          |
+| T   | T   | T          |
+**** 2 variables; 4 (or 2^2) rows.
+**** Written in LaTeX with \lor (logical or)
+| $p$         | It is raining.                |
+| $q$         | It is cold.                   |
+| $p \lor q$ | It is raining or it is cold. |
+
+** Exclusive Or $\oplus$
+*** The *exclusive or* of two propositions is true if either one *but not both* of the subordinate Boolean expressions is true.
+| $p$ | $q$ | $p \oplus q$ |
+| F   | F   | F            |
+| F   | T   | T            |
+| T   | F   | T            |
+| T   | T   | F            |
+**** 2 variables; 4 (or 2^2) rows.
+**** Written in LaTeX with \oplus (no "logical" mnemonic)
+| $p$         | It is raining.                |
+| $q$         | It is cold.                   |
+| $p \oplus q$ | It is raining or it is cold but not both. |
+
+** Conditional $\rightarrow$
+*** The *conditional* (*implication*) is true if the first subordinate Boolean is false or the second one is false.
+| $p$ | $q$ | $p \rightarrow q$ |
+| F   | F   | T                 |
+| F   | T   | T                 |
+| T   | F   | F                 |
+| T   | T   | T                 |
+**** 2 variables; 4 (or 2^2) rows.
+**** Written in LaTeX with \rightarrow
+| $p$               | It has gone viral.                      |
+| $q$               | It is famous.                           |
+| $p \rightarrow q$ | If it has gone viral then it is famous. |
+
+*** A conditional is a *rule* describing a way the world (system) behaves
+**** It is a Boolean expression so the rule can be
+***** true - it describes how the subordinate clauses behave in the system
+***** false - it describes a non-existent relationship between the subordinate clauses
+**** It is not an =if...then= statement as in a programming language; both halves are evaluated as truth values and the truth value of the whole statement is determined.
+
+*** There are many ways to express $p \rightarrow q$  in English:
+**** if $p$ then $q$
+**** $p$ implies $q$
+**** if $p$ , $q$
+**** $p$ only if $q$
+**** $p$ is sufficient for $q$
+**** a sufficient condition for $q$ is $p$
+**** $q$ if $p$
+**** $q$ whenever $p$
+**** $q$ when $p$
+**** $q$ is necessary for $p$
+**** a necessary condition for $p$ is $q$
+**** $q$ follows from $p$
+**** $q$ unless $\lnot p$
+
+*** In $p \rightarrow q$, $p$ is the antecedent and $q$ is the consequent.
+
+** Bionditional $\leftrightarrow$
+*** The *biconditional* is true if the two subordinate Boolean expressions have the same truth value
+| $p$ | $q$ | $p \leftrightarrow q$ |
+| F   | F   | T                     |
+| F   | T   | F                     |
+| T   | F   | F                     |
+| T   | T   | T                     |
+**** 2 variables; 4 (or 2^2) rows.
+**** Written in LaTeX with \leftrightarrow
+| $p$                   | It has gone viral.                                  |
+| $q$                   | It is famous.                                       |
+| $p \leftrightarrow q$ | If it has gone viral *if and only if* it is famous. |
+
+*** $p \leftrightarrow q$ is the same as $p \rightarrow q \land q \rightarrow p$.
+**** It is also the inverse of another logical operator. Which one?
+
+** Summary of Boolean Operators and Expressions
+*** Simple proposition: $p$, $q$, $r$, ...
+*** Operators (in decreasing order of precedence)
+| $\lnot$           | not (unary prefix)           |
+| $\land$           | and                          |
+| $\lor$, $\oplus$  | [inclusive] or, exclusive or |
+| $\rightarrow$     | conditional                  |
+| $\leftrightarrow$ | biconditional                       |
+*** Compound propositions: operators combining other propositions
+$s$
+$p \land q$
+$(p \rightarrow \lnot q) \lor r$
+$\lnot p \lor q$
+
+* Applications of Propositional Logic
+** Translating English sentences.
+*** If I am clever then I will pass Foundations
+**** Define simple propositions
+| $c$ | I am clever             |
+| $p$ | I will pass Foundations |
+**** Notice that order and actual letters are arbitrary
+**** Now translate the English to "If $c$ then $p$".
+**** Finally: $c \rightarrow p$
+
+*** I am clever or I will pass Foundations
+**** $c \lor p$
+
+*** The world is billions of years old when evolution explains biodiversity
+| $b$ | The world is billions of years old |
+| $e$ | Evolution explains biodiversity    |
+**** $b$ when $e$
+**** $e \rightarrow b$
+
+** System specification
+*** Translating sentences from natural languages is necessary for software/hardware specifications to make sure everyone interprets them the same way. (Think about "or": inclusive or exclusive?)
+
+*** If the system is full then the automated reply cannot be sent.
+| $f$ | The system is full.              |
+| $a$ | The automated reply can be sent. |
+**** Note: the logical state of $a$ is the inverse of the version used in the statement. It is almost always better to use "positive" logic (no logical "not" in the English interpretation of a simple proposition); humans are much better at using (and remembering) positive rather than negative logic.
+**** Specification: $f \rightarrow \lnot a$ (Why no parentheses?)
+
+*** Translated specifications can be checked for consistency
+**** A set of specifications is consistent if they cannot be used to derive a *contradiction*.
+***** A *contradiction* is a proposition that is always false.
+***** A *tautology* is a proposition that is always true.
+*** Is this system spec consistent?
+a. The diagnostic message is stored in the buffer or it is retransmitted.
+b. The diagnostic message is not stored in the buffer.
+c. If the diagnostic message is stored in the buffer, then it is retransmitted.
+| $p$ | The diagnostic message is stored in the buffer. |
+| $q$ | The diagnostic message is retransmitted.        |
+
+a. $p \lor q$
+b. $\lnot p$
+c. $p \rightarrow q$
+
+| $p$ | $q$ | $p \lor q$ | $\lnot p$ | $p \rightarrow q$ |
+| F   | F   | F          | T         | T                 |
+| F   | T   | T          | T         | T                 |
+| T   | F   | T          | F         | F                 |
+| T   | T   | T          | F         | T                 |
+
+**** Is there an assignment of values (a row) for which all three statements of the spec are true?
+
+** Logic puzzles
+*** Knights and knaves
+**** There exists an island where every inhabitant is either a *knight* or a *knave*.
+***** Every inhabitant knows their own /type/.
+***** Any inhabitant can tell, instantly, the type of any other inhabitant.
+***** A /knight/ only makes logically true statements.
+***** A /knave/ only makes logically false statements.
+**** You meet two islanders, A and B. They say
+A. B is a knight.
+B. We are of opposite types.
+     What can you conclude?
+**** You meet an islander, K, at a crossroads in the jungle. You know that one path leads to a beach, the other to a museum. As a computer scientist you hate the sun and surf. What one question can you ask K to determine which path to follow?
