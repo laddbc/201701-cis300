@@ -191,13 +191,15 @@ All of us benefit from support during times of struggle. You are not alone. Ther
   :CUSTOM_ID: schedule
   :END:
 
-** TODO <2017-01-23 Mon 13:00> Introduction to material, course, software.
-** TODO <2017-01-24 Tue 14:00> [[file:notes/propositional-logic.org]]
-** TODO <2017-01-25 Wed 13:00>
-** TODO <2017-01-27 Fri 13:00>
+** DONE <2017-01-23 Mon 13:00> Introduction to material, course, software.
+** DONE <2017-01-24 Tue 14:00> [[notes/propositional-logic.org]]
+** DONE <2017-01-25 Wed 13:00>
+** DONE <2017-01-27 Fri 13:00> [[notes/propositional-equivalence.org]]
+                                [[notes/showing-propositional-equivalence.org]]
 
 
 ** TODO <2017-01-30 Mon 13:00>
+Reading: Rosen 1.2 - 1.3
 ** TODO <2017-01-31 Tue 14:00>
 ** TODO <2017-02-01 Wed 13:00>
 ** TODO <2017-02-03 Fri 13:00>
@@ -296,4 +298,3 @@ All of us benefit from support during times of struggle. You are not alone. Ther
    :CUSTOM_ID: rosen1.1-2-8
    :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
    :END:
-

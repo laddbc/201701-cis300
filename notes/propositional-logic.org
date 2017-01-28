@@ -1,5 +1,6 @@
 #+STARTUP: showall
 
+Propositional Logic: An Introduction
 
 * A *proposition* is a statement that is either _true_ or _false_; not possibly both or neither.
 ** Propositions
@@ -94,7 +95,7 @@
 | $p \oplus q$ | It is raining or it is cold but not both. |
 
 ** Conditional $\rightarrow$
-*** The *conditional* (*implication*) is true if the first subordinate Boolean is false or the second one is false.
+*** The *conditional* (*implication*) is true if the first subordinate Boolean is false or the second one is true.
 | $p$ | $q$ | $p \rightarrow q$ |
 | F   | F   | T                 |
 | F   | T   | T                 |
@@ -140,7 +141,7 @@
 **** Written in LaTeX with \leftrightarrow
 | $p$                   | It has gone viral.                                  |
 | $q$                   | It is famous.                                       |
-| $p \leftrightarrow q$ | If it has gone viral *if and only if* it is famous. |
+| $p \leftrightarrow q$ | It has gone viral *if and only if* it is famous. |
 
 *** $p \leftrightarrow q$ is the same as $p \rightarrow q \land q \rightarrow p$.
 **** It is also the inverse of another logical operator. Which one?

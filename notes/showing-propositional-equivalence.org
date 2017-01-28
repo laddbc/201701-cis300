@@ -1,0 +1,42 @@
+#+STARTUP: showall
+
+Showing Propositional Equivalence
+
+* How to show two propositions are equivalent. Either
+1. Make a truth table for the two propositions.
+   - If the two propositions have the same truth value for every assignment of truth values to their variables
+   - Or, if the biconditional of the two propositions under consideration is a tautology
+   - Then the two propositions are equivalent.
+2. Rewrite one of the propositions by applying known propositional equivalences, transforming it, perhaps across multiple steps, into the other proposition under consideration.
+
+
+* Show that $\lnot (p \rightarrow q)$ and $p \land \lnot q$ are equivalent.
+** Truth Table
+| $p$ | $q$ | $(p \rightarrow q)$ | $\lnot (p \rightarrow q)$ |
+| F   | F   | T                   | F                         |
+| F   | T   | T                   | F                         |
+| T   | F   | F                   | T                         |
+| T   | T   | T                   | F                         |
+
+| $p \land \lnot q$ | $\lnot (p \rightarrow q) \leftrightarrow p \land \lnot q$ |
+| F                 | T                                                         |
+| F                 | T                                                         |
+| T                 | T                                                         |
+| F                 | T                                                         |
+
+** Rewriting with well-known equivalences
+ Proposition                              Rewritten to                  | Reason
+ $\lnot (p \rightarrow q)$      $\equiv$  $\lnot (\lnot p \lor q)$      | Table 7 (book)
+ $\lnot (\lnot p \lor q)$       $\equiv$  $\lnot \lnot p \land \lnot q$ | DeMorgan's
+ $\lnot \lnot p \land \lnot q$  $\equiv$  $p \land \lnot q$             | Double Negative
+
+* Show DeMorgan's Law for negated and.
+
+** To be shown: $\lnot (p \land q) \equiv \lnot p \lor \lnot q$
+** Truth Table
+| $p$ | $q$ | $(p \land q)$ | $\lnot (p \land q)$ | $\lnot p \lor \lnot q$ |
+| F   | F   | F             | T                   | T                      |
+| F   | T   | F             | T                   | T                      |
+| T   | F   | F             | T                   | T                      |
+| T   | T   | T             | F                   | F                      |
+$\therefore$ $\lnot (p \land q) \equiv \lnot p \lor \lnot q$

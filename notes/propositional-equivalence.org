@@ -1,0 +1,65 @@
+#+STARTUP: showall
+Propositional Equivalence
+
+* Some definitions
+** A proposition that is always true is a *tautology*.
+** A proposition that is always false is a *contradiction*
+** A proposition that is neither a tautology or a contradiction is a *contingency*
+| $p$ | $\lnot p$   | $p \lor \lnot p$ | $p \land \lnot p$ |
+| F   | T           | T                | F                 |
+| T   | F           | T                | F                 |
+|     | contingency | tautology        | contradiction     |
+
+* Logical equivalence
+** If proposition $p$ and $q$ have the same truth value for every assignment of truth values to their constituent propositions, the two propositions are *logically equivalent*
+** This is written $p \equiv q$
+*** Equivalent is typed with \equiv
+** $p \equiv q$ is the same as saying $p \leftrightarrow q$ is a tautology
+
+** Example: Show that $\lnot(p \rightarrow q)$ is logically equivalent to the proposition $p \land \lnot q$
+|     |     | a                        | b                 |                       |
+| $p$ | $q$ | $\lnot(p \rightarrow q)$ | $p \land \lnot q$ | $a \leftrightarrow b$ |
+| F   | F   | F                        | F                 | T                     |
+| F   | T   | F                        | F                 | T                     |
+| T   | F   | T                        | T                 | T                     |
+| T   | T   | F                        | F                 | T                     |
+
+* Some propositional equivalences
+** Identity
+$p \land T \equiv p$
+$p \lor F \equiv p$
+
+** Double negation
+$\lnot \lnot p \equiv p$
+
+** Domination
+$p \lor T \equiv T$
+$p \land F \equiv F$
+
+** Idempotent
+$p \land p \equiv p$
+$p \lor p \equiv p$
+
+** Commutative
+$t \land u \equiv u \land t$
+$t \lor u \equiv u \lor t$
+
+** Associative
+$(t \land u) \land v \equiv t \land (u \land v)$
+$(t \lor u) \lor v \equiv t \lor (u \lor v)$
+
+** Distributive
+$a \land (b \lor c) \equiv (a \land b) \lor (a \land c)$
+$a \lor (b \land c) \equiv (a \lor b) \land (a \lor c)$
+
+** Demorgan's
+$\lnot (p \land q) \equiv \lnot p \lor \lnot q$
+$\lnot (p \lor q) \equiv \lnot p \land \lnot q$
+
+** Absorbsion
+$r \land (r \land q) \equiv r \land q$
+$r \lor (r \lor q) \equiv r \lor q$
+
+** Negation
+$p \land \lnot p \equiv \mathrm{F}$
+$p \lor \lnot p \equiv \mathrm{T}$
