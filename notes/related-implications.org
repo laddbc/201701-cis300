@@ -1,0 +1,52 @@
+#+STARTUP: showall
+
+Related Implications
+
+* An implication actually defines 4 related implications:
+** Implication: $p \rightarrow q$
+** Converse: $q \rightarrow p$
+** Inverse: $\lnot p \rightarrow \lnot q$
+** Contrapositive: $\lnot q \rightarrow \lnot p$
+
+* How do the truth values of the four implications relate?
+|     |     | Original          | Converse          |
+| $p$ | $q$ | $p \rightarrow q$ | $q \rightarrow p$ |
+| F   | F   | T                 | T                 |
+| F   | T   | T                 | F                 |
+| T   | F   | F                 | T                 |
+| T   | T   | T                 | T                 |
+
+| Inverse                       | Contrapositive                |
+| $\lnot p \rightarrow \lnot q$ | $\lnot q \rightarrow \lnot p$ |
+| T                             | T                             |
+| F                             | T                             |
+| T                             | F                             |
+| T                             | T                             |
+
+** Original implication is equivalent to the /contrapositive/
+*** $p \rightarrow q \equiv \lnot q \rightarrow \lnot p$
+** /Converse/ implication is equivalent to the /inverse/
+*** $q \rightarrow p \equiv \lnot p \rightarrow \lnot q$
+
+* Practice with English to logic and back again
+** State the converse, inverse, and contrapositive of
+*** If there is ice cream, I will have dessert.
+** Define subordinate propositions
+*** $i$ - There is ice cream
+*** $d$ - I have dessert
+** Variations
+*** Original: $i \rightarrow d$ - "If there is ice cream then I will have dessert."
+*** Converse : $d \rightarrow i$ - "If I have dessert then there is ice cream."
+*** Inverse: $\lnot i \rightarrow \lnot d$ - "If there is no ice cream then I have no dessert."
+*** Contrapositive: $\lnot d \rightarrow \lnot i$ - "If I have no dessert then there is no ice cream."
+
+** State the converse, inverse, and contrapositive of
+*** I play video games unless there is curling on.
+** Define propositions
+*** $v$ - I play video games
+*** $c$ - Curling is on
+** Variations
+*** Original: $\lnot c \rightarrow v$ - "If no curling is on then I play video games."
+*** Converse: $v \rightarrow \lnot c$ - "If I play video games then no curling is on."
+*** Inverse: $c \rightarrow \lnot v$ - "If curling is on then I do not play video games."
+*** Contrapositive: $\lnot v \rightarrow c$ - "If I do not play video games then curling is on."

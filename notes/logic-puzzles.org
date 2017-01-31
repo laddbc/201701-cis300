@@ -1,0 +1,33 @@
+#+STARTUP: showall
+
+Logic Puzzles
+* Knights and Knaves
+** As a reminder: on Smullyan's Island of Knights and Knaves, Knights only tell the truth, Knaves only tell untruths, each knows the type of any other islander, and you cannot tell the type of an islander without hearing them speak (or be spoken about).
+** On encountering two islanders, Ki and Ko, what, if anything, can you conclude about their types?
+(a) Ki: "At least one of us is a knave."
+    Ko: ""
+
+(b) Ki: "I am a knight."
+    Ko: "I am a knight."
+
+(c) Ki: "I am a knave or Ko is a knight."
+    Ko: ""
+
+(d) Ki: "The two of us are both knights."
+    Ko: "Ki is a knave."
+
+(e) Ki: "We are both the same."
+    Ko: "We are both the same."
+
+(f) Ki: "My being a knight implies Ko is a knave."
+    Ko: "Ki is a knave."
+
+(g) Ki: "My being a knight implies Ko is a knight."
+    Ko: ""
+
+* Touchy Friends
+  Jasmine will attend but will be unhappy if Samir attends.
+  Samir will attend only if Kanti also attends.
+  Kanti will not attend unless Jasmine attends.
+
+  What collection of friends can you invite so no one attending is

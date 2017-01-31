@@ -1,0 +1,116 @@
+#+STARTUP: showall
+
+Predicates and Quantifiers
+
+* Consider the statement
+  P(x) ::= x is playing in this week's Super Bowl.
+** What is the truth value of this statement?
+** P(x) is a /propositional function of x/
+*** More commonly, P is a /predicate/ of x
+
+* A /predicate/ is a truth-valued function (or, a predicate is a Boolean-valued function).
+
+* Examples
+** Let G(y) denote (y > 75).
+*** G is a predicate of y.
+*** What is G(0)?
+*** G(104)?
+*** G(75)?
+
+** Let R(a, b) ::= a = b + 7
+*** What is R?
+*** What is R(0, -7)?
+*** What is R(0, 0)?
+
+* Domains of discourse
+** Let P(x) be a statement involving the variable x and let D be the set from which x draws its values.
+*** P is a predicate of x iff for every x in D, P(x) is either true or false.
+*** D is the /domain of discourse/ for x
+** Let G(y) denote (y > 75).
+   D = $\mathbb{Z} = {..., -2, -1, 0, 1, 2, ...} - the set of integers
+*** G(-1) = F; G(75) = F; G(104) = T
+** Let P(x) ::= x is playing in this week's Super Bowl
+  D = { All NFL teams }
+*** P(New England Patriots) = T; P(Detroit Lions) = F; P(Denver Broncos) = F
+
+* Universal quantification
+** Let P be a predicate over a domain of discourse, D.
+*** The statement "for every x in D, P(x)" is said to be /universally quantified/.
+*** In mathematical notation: $\forall x \in D, P(x)$
+**** $\forall$ is written with \forall
+
+** What does $\forall x \in D, P(x)$ mean?
+*** The quantified statement is a proposition.
+*** $\forall x \in D, P(x)$ is true if P(x) in true for every x in D.
+*** $\forall x \in D, P(x)$ is false otherwise; alternatively, $\forall x \in D, P(x)$ is false if there exists at least one x in D for which P(x) is false.
+
+** Examples
+*** $\forall x (x^2 \ge 0)$   Is this statement T or F?
+**** T if D = $\mathbb{R}.
+**** F if D = $\mathbb{C}
+
+*** $\forall x (x^2 - 1 > 0)$   Is this statement T or F?
+**** F if D = $\mathbb{Z} or D = $\mathbb{R} because the predicate is false when x = 1.
+**** The value x = 1, where the predicate is false, is a /counterexample/ to the quantified statement.
+
+** Thinking about looping
+*** Suppose $P$ is a predicate and the domain of discourse $D$ = $\{d_1, d_2, ..., d_n\}$. Then the following code determines whether $\forall x P(x)$ is T/F.
+
+#+begin_src
+    for i = 1 to n
+      if ($\lnot P(d_i)$)
+        return F
+    return T
+#+end_src
+*** This means $\forall x P(x) \equiv ( P(d_1) \land P(d_2) \land ... \land P(d_n) )$
+
+* Variables: free and bound
+** q in K(q) is a /free variable/. It is not quantified.
+** r in $\forall r N(r)$ is a /bound variable/. It is bound by the universal quantifier. We might need more information the evaluate the truth value of the quantified statement.
+
+** A statement containing /free variables/ *is not* a proposition.
+** A statement containing no free variables *is* a proposition. (Assuming we know the domains of discourse for the quantifications.)
+
+* Showing that a universally quantified expression is true
+** The symbol $\forall$ can be read "for every", "for all", "for any".
+** To prove that $\forall x P(x)$, we must test every value of D...
+** OR - Let x denote an /arbitrary element/ of the domain of discourse D. Proceed with the argument using x. Whatever is claimed about x must be true /no matter what value x might have in D/.
+*** Show that
+    $\forall x \in \mathbb{R}\; [(x > 1) \rightarrow (x + 1 > 1)]$
+
+* Existential quantification
+** Let P be a predicate over a domain of discourse, D.
+*** The statement "for some x in D, P(x)" is said to be /existentially quantified/.
+*** In mathematical notation: $\exists x \in D, P(x)$
+**** $\exists$ is written with \exists
+
+** What does $\exists x \in D, P(x)$ mean?
+*** The quantified statement is a proposition.
+*** $\exists x \in D, P(x)$ is true if P(x) in true for some x in D.
+*** $\exists x \in D, P(x)$ is false otherwise; alternatively, $\exists x \in D, P(x)$ is false if there exists no x in D for which P(x) is true.
+
+** Examples
+*** $\exists x ( \frac{x}{x^2 + 1} = \frac{2}{5} )$
+    Is this statement true or false?
+**** It is true for D = $\mathbb{Z} because x = 2 is an integer for which the predicate is true.
+*** $\exists x \in \mathbb{R} \; ( \frac{1}{x^2 + 1} \ge 1 )$
+    Is the statement true or false?
+
+** Thinking about looping
+*** Suppose $P$ is a predicate and the domain of discourse $D$ = $\{d_1, d_2, ..., d_n\}$. Then the following code determines whether $\exists x P(x)$ is T/F.
+
+#+begin_src
+    for i = 1 to n
+      if ($\lnot P(d_i)$)
+        return T
+    return F
+#+end_src
+*** How does this compare to the code for $\forall$?
+*** This means $\exists x P(x) \equiv ( P(d_1) \lor P(d_2) \lor ... \lor P(d_n) )$
+
+* Showing that an existentially quantified expression is true
+** The symbol $\exists$ can be read "for some", "there exists", "at least one".
+** To prove that $\exists x P(x)$, we must find the right value of D
+** OR - Let x denote an /arbitrary element/ of the domain of discourse D. Proceed with the argument using x. Ifhatever is claimed about x must be false /no matter what value x might have in D/, the proposition is false..
+*** Show that
+    $\exists x \in \mathbb{R} \; ( \frac{1}{x^2 + 1} \ge 1 )$ is false
