@@ -298,3 +298,13 @@ Reading: Rosen 1.2 - 1.3
    :CUSTOM_ID: rosen1.1-2-8
    :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
    :END:
+
+** TODO assignment:rosen1.1-1.6 :assignment:
+   DEADLINE: <2017-02-06 Mon>
+   :PROPERTIES:
+   :CATEGORY: homework
+   :POINTS:   10
+   :CUSTOM_ID: rosen1.1-1.6
+   :RUBRIC:   (("technical" . 0.7) ("presentation" . 0.3))
+   :END:
+
