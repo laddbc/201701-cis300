@@ -1,0 +1,299 @@
+#+STARTUP: showall
+
+Rules of Inference
+
+* Inference
+** We study logic to /use/ it to /prove/ things.
+** A /proof/ is a valid /argument/ that starts with a set of /given conditions/ and, through the application of valid rewrite rules of inference, /concludes/ that which is to be shown.
+** The /rules of inference/ are templates for building valid arguments.
+
+* Modus Ponens
+** Consider
+   If it is snowing today then we will go skiing.
+   It is snowing today.
+   $\therefore$ We will go skiing.
+
+** General Format
+   $p \rightarrow q$
+   $p$
+   $\therefore q$
+
+** Proof(?)
+   If $\sqrt{2} > \frac{3}{2}$ then $(\sqrt{2})^2 > (\frac{3}{2})^2$
+   $\sqrt{2} > \frac{3}{2}$
+   $\therefore \, (\sqrt{2})^2 > (\frac{3}{2})^2$
+   $\frac{8}{4} > \frac{9}{4}$
+*** What is wrong with this proof?
+
+* Rules of Inference
+|---------------------------------+------------------------|
+| Rule                            | Name                   |
+|---------------------------------+------------------------|
+| $p \rightarrow q$               | Modus Ponens           |
+| $p$                             |                        |
+|---------------------------------|                        |
+| $\therefore \, q$               |                        |
+|---------------------------------+------------------------|
+| $p \rightarrow q$               | Modus Tolens           |
+| $\lnot q$                       |                        |
+|---------------------------------|                        |
+| $\therefore \, \lnot p$         |                        |
+|---------------------------------+------------------------|
+| $p \rightarrow q$               | Hypothetical Syllogism |
+| $q \rightarrow r$               |                        |
+|---------------------------------|                        |
+| $\therefore \, p \rightarrow r$ |                        |
+|---------------------------------+------------------------|
+| $p \lor q$                      | Disjunctive Syllogism  |
+| $\lnot p$                       |                        |
+|---------------------------------|                        |
+| $\therefore \, q$               |                        |
+|---------------------------------+------------------------|
+| $p$                             | Addition               |
+|---------------------------------|                        |
+| $\therefore \, p \lor q$        |                        |
+|---------------------------------+------------------------|
+| $p \land q$                     | Simplification         |
+|---------------------------------|                        |
+| $\therefore \, p$               |                        |
+|---------------------------------+------------------------|
+| $p$                             | Conjunction            |
+| $q$                             |                        |
+|---------------------------------|                        |
+| $\therefore \, p \land q$       |                        |
+|---------------------------------+------------------------|
+| $p \lor q$                      | Resolution             |
+| $\not p \lor r$                 |                        |
+|---------------------------------|                        |
+| $\therefore \, q \lor r$        |                        |
+|---------------------------------+------------------------|
+
+#+BEGIN_LaTeX
+  \begin{tabular}{|l|l|l|}
+    \hline
+    \emph{Rule of Inference}&\emph{Name}\\\hline
+    \begin{tabular}{ll}
+      &$p \rightarrow q$\\
+      &$p$\\\cline{2-2}
+      $\therefore$&$q$\\
+    \end{tabular}
+    &Modus Ponens\\\hline
+    \begin{tabular}{ll}
+      &$p \rightarrow q$\\
+      &$\lnot q$\\\cline{2-2}
+      $\therefore$&$\lnot p$\\
+    \end{tabular}
+    &Modus Tollens\\\hline
+    \begin{tabular}{ll}
+      &$p \rightarrow q$\\
+      &$q \rightarrow r$\\\cline{2-2}
+      $\therefore$&$p \rightarrow r$\\
+    \end{tabular}
+    &Hypothetical Syllogism\\\hline
+    \begin{tabular}{ll}
+      &$p \lor q$\\
+      &$\lnot p$\\\cline{2-2}
+      $\therefore$&$q$\\
+    \end{tabular}
+    &Disjunctive Syllogism\\\hline
+    \begin{tabular}{ll}
+      &$p$\\\cline{2-2}
+      $\therefore$&$p \lor q$\\
+    \end{tabular}
+    &Addition\\\hline
+    \begin{tabular}{ll}
+      &$p \land q$\\\cline{2-2}
+      $\therefore$&$p$\\
+    \end{tabular}
+    &Simplification\\\hline
+    \begin{tabular}{ll}
+      &$p$\\
+      &$q$\\\cline{2-2}
+      $\therefore$&$p \land q$\\
+    \end{tabular}
+    &Conjunction\\\hline
+    \begin{tabular}{ll}
+      &$p \lor q$\\
+      &$\lnot p \lor r$\\\cline{2-2}
+      $\therefore$&$q \lor r$\\
+    \end{tabular}
+    &Resolution\\\hline
+  \end{tabular}
+#+END_LaTeX
+
+* Examples
+** If Jimmy moves to Anchorage, then he will freeze in winter; but if he moves to Augusta, then he will burn up in summer.  Either he will move to Anchorage or Augusta.  Therefore, he will either freeze this winter or burn up next summer.
+*** Choose propositions for translation:
+    a - Jimmy moves to Anchorage.
+    g - Jimmy moves to Augusta.
+    f - Jimmy freezes next winter.
+    b - Jimmy burns up next summer.
+*** Translate the givens:
+    $a \rightarrow f$
+    $g \rightarrow b$
+    $a \lor g$
+*** Translate the conclusion:
+    $f \lor b$
+*** Prove it
+|              | $a \rightarrow f$       | Premise                              | 1 |
+|              | $g \rightarrow b$       | Premise                              | 2 |
+|              | $a \lor g$              | Premise                              | 3 |
+|              | $\lnot a \rightarrow g$ | Material implication, 3              | 4 |
+|              | $\lnot a \rightarrow b$ | Hypothetical Syllogism 2, 4          | 5 |
+|              | $\lnot b \rightarrow a$ | Contrapositive and Double Negative 5 | 6 |
+|              | $\lnot b \rightarrow f$ | HS 1,6                               | 7 |
+|              | $b \lor f$              | MI, DN 7                             | 8 |
+| $\therefore$ | $f \lor b$              | Commutation of $\lor$ 8              |   |
+
+**** Pretty version of the proof in LaTeX block
+#+BEGIN_LaTeX
+    \begin{tabular}{lllr}
+      &$a \rightarrow f$&Premise&1\\
+      &$g \rightarrow b$&Premise&2\\
+      &$a \lor g$&Premise&3\\
+      &$\lnot a \rightarrow g$&Material implication, 3&4\\
+      &$\lnot a \rightarrow b$&Hypothetical Syllogism 2, 4&5\\
+      &$\lnot b \rightarrow a$&Contrapositive and Double Negative 5&6\\
+      &$\lnot b \rightarrow f$&HS 1,6&7\\
+      &$b \lor f$&MI, DN 7&8\\\cline{2-3}
+      $\therefore$&$f \lor b$&Commutation of $\lor$ 8&\\
+    \end{tabular}
+#+END_LaTeX
+
+* Fallacies (or Anti-rules of Inference)
+** [Affirming the Conclusion] If you are a font geek, then you are disappointed with the subtitles in /Avatar/. You are disappointed with the subtitles in /Avatar/. Therefore, you are a font geek.
+
+*** Propositions
+    g - you are a font geek
+    d - you are disappointed with the subtitles
+*** Givens
+    $g \rightarrow d$
+    $d$
+*** Conclusion
+    $g$
+*** Proof?
+**** Equivalent to asking if $((g \rightarrow d) \land d) \rightarrow g$ is a tautology.
+**** Is it?
+
+** [Denying the Hypothesis] If you are a true /Star Wars/ fan, then you love Jar Jar Binks. You are not a true /Star Wars/ fan. Therefore, you hate Jar Jar Binks.
+
+*** Propositions
+    s - you are a true /Star Wars/ fan
+    j - you love Jar Jar Binks
+*** Givens
+    $s \rightarrow j$
+    $\lnot s$
+*** Conclusion
+    $\lnot j$
+*** Valid conclusion?
+
+* Example [1.6 35]
+** Is the following argument valid?
+*** If Superman were able and willing to prevent evil, he would do so.  If Superman were unable to prevent evil, he would be impotent; if he were unwilling to prevent evil, he would be malevolent. Superman does not prevent evil. If Superman exists, he is neither impotent nor malevolent. Therefore, Superman does not exist.
+**** Propositions?
+     s - Superman exists
+     w - willing to prevent evil
+     a - able to prevent evil
+     e - Superman prevents evil
+     i - Superman is impotent
+     m - Superman is malevolent
+**** Givens
+     $(w \land a) \rightarrow e$
+     $\lnot a \rightarrow i$
+     $\lnot w \rightarrow m$
+     $\lnot e$
+     $s \rightarrow (\lnot i \land \lnot m)
+**** Conclusion
+     $\lnot s$
+**** Give a valid proof (or counter example)
+
+* Inference with quantifiers
+** John is a lawyer. All lawyers are rich. Every person has a house. If a person is rich and they have a house, the house is big. If a person lives in a big house, they have a mortgage. Everyone with a mortgage has to work.  Therefore, John has to work.
+*** Predicates
+    L(p) - person p is a lawyer
+    R(p) - person p is rich
+    H(p, h) - person p owns house h
+    B(h) - house h is big
+    M(p) - person p has a mortgage
+    W(p) - person p must work
+*** Givens
+    $L(J)$
+    $\forall p \in \{People\} \, L(p) \rightarrow R(p)$
+    $\forall p \in \{People\} \exists h \in \{Houses\} \, H(p,h)$
+    $\forall p \in \{People\} \forall h \in \{Houses\} (R(p) \land H(p, h) \rightarrow B(h))$
+    $\forall p \in \{People\} \forall h \in \{Houses\} (H(p, h) \land B(h) \rightarrow M(p))$
+    $\forall p \in \{People\} \, M(p) \rightarrow W(p)$
+*** Conclusion
+    $W(J)$
+
+** Inference rules with quantifiers
+*** Universal Instantiation
+|---------------------------------------------+-------------------------|
+| Rule                                        | Name                    |
+|---------------------------------------------+-------------------------|
+| $\forall x P(x)$                            | Universal Instantiating |
+|---------------------------------------------|                         |
+| $\therefore \, P(c)$ (for any particular c) |                         |
+|---------------------------------------------+-------------------------|
+**** Notice that I can pick which c to use.
+
+*** Prove R(J)
+|              | $\forall p (L(p) \rightarrow R(p))$ | Premise                      | 1 |
+|              | $L(J) \rightarrow R(J)$             | Universal Instantiation in 1 | 2 |
+**** Because the premise is true for any person, it must be true for the person named John.
+|              | $L(J)$                              | Premise                      | 3 |
+| $\therefore$ | $R(J)$                              | Modus Ponens with 2          | 4 |
+
+*** Existential Instantiation
+|----------------------------------------------+---------------------------|
+| Rule                                         | Name                      |
+|----------------------------------------------+---------------------------|
+| $\exists x P(x)$                             | Existential Instantiation |
+|----------------------------------------------|                           |
+| $\therefore \, P(c)$ (for some particular c) |                           |
+|----------------------------------------------+---------------------------|
+**** Notice that I cannot pick which c to use; I just know there is one
+
+*** Prove H(J, Q) (John owns the house we are calling Q)
+|              | $\forall p \exist h H(p, h)$ | Premise                        | 5 |
+|              | $\exists h H(J, h)$          | Universal Instantiation in 5   | 6 |
+| $\therefore$ | $H(J, Q)$                    | Existential Instantiation in 6 | 7 |
+**** Because the premise is true for some house, we pick one for which it is true and label it Q.
+
+*** Prove B(Q)
+|              | $\forall p \forall h (R(p) \land H(p,h) \rightarrow B(h))$ | Premise  |  8 |
+|              | $R(J) \land H(J,Q) \rightarrow B(Q)$                       | 2UI      |  9 |
+|              | $R(J) \land H(J,Q)$                                        | Conj 4,7 | 10 |
+| $\therefore$ | $B(Q)$                                                     | MP 9,10 | 11 |
+
+*** M(J)
+|            | $\forall p \forall h (H(p,h) \land B(h) \rightarrow M(p))$ | Premise    | 12 |
+|            | $H(J,Q) \land B(Q) \rightarrow M(J)$                       | UI,IE      | 13 |
+|            | $H(J,Q) \land B(Q)$                                        | Conj 7, 10 | 14 |
+| \therefore | $M(J)$                                                     | MP 13, 14  | 15 |
+
+*** W(J)
+|              | $\forall p (M(p) \rightarrow W(p))$ | Premise   | 16 |
+|              | $M(J) \rightarrow W(J)$             | UI 16     | 17 |
+| $\therefore$ | $W(J)$                              | MP 15 ,17 | 18 |
+
+** All the quantified rules
+|----------------------------------------------+----------------------------|
+| Rule                                         | Name                       |
+|----------------------------------------------+----------------------------|
+| $\forall x P(x)$                             | Universal Instantiating    |
+|----------------------------------------------|                            |
+| $\therefore \, P(c)$ (for any particular c)  |                            |
+|----------------------------------------------+----------------------------|
+| $\exists x P(x)$                             | Existential Instantiation  |
+|----------------------------------------------|                            |
+| $\therefore \, P(c)$ (for some particular c) |                            |
+|----------------------------------------------+----------------------------|
+| $P(c)$ (for an arbitrary c)                  | Universal Generalization   |
+|----------------------------------------------|                            |
+| $\therefore \, \forall x P(x)$               |                            |
+|----------------------------------------------+----------------------------|
+| $P(c)$ (for some particular c)               | Existential Generalization |
+|----------------------------------------------|                            |
+| $\therefore \, \exists x P(x)                |                            |
+|----------------------------------------------+----------------------------|

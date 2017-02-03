@@ -1,0 +1,318 @@
+% Created 2017-02-03 Fri 10:30
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[version=3]{mhchem}
+\usepackage[numbers,super,sort&compress]{natbib}
+\usepackage{natmove}
+\usepackage{url}
+\usepackage{minted}
+\usepackage{underscore}
+\usepackage[linktocpage,pdfstartview=FitH,colorlinks,
+linkcolor=blue,anchorcolor=blue,
+citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
+\usepackage{attachfile}
+\author{Brian C. Ladd}
+\date{\today}
+\title{}
+\begin{document}
+
+\tableofcontents
+
+Rules of Inference
+
+\section{Inference}
+\label{sec:orga78c5ea}
+\subsection{We study logic to \emph{use} it to \emph{prove} things.}
+\label{sec:org2f93906}
+\subsection{A \emph{proof} is a valid \emph{argument} that starts with a set of \emph{given conditions} and, through the application of valid rewrite rules of inference, \emph{concludes} that which is to be shown.}
+\label{sec:orgd8d0fb3}
+\subsection{The \emph{rules of inference} are templates for building valid arguments.}
+\label{sec:org6677c6b}
+
+\section{Modus Ponens}
+\label{sec:orgf133a33}
+\subsection{Consider}
+\label{sec:org52db3e4}
+If it is snowing today then we will go skiing.
+It is snowing today.
+\(\therefore\) We will go skiing.
+
+\subsection{General Format}
+\label{sec:orga4dd7c9}
+\(p \rightarrow q\)
+\(p\)
+\(\therefore q\)
+
+\subsection{Proof(?)}
+\label{sec:org4bc84a0}
+If \(\sqrt{2} > \frac{3}{2}\) then \((\sqrt{2})^2 > (\frac{3}{2})^2\)
+\(\sqrt{2} > \frac{3}{2}\)
+\(\therefore \, (\sqrt{2})^2 > (\frac{3}{2})^2\)
+\(\frac{8}{4} > \frac{9}{4}\)
+\subsubsection{What is wrong with this proof?}
+\label{sec:org6ce3ada}
+
+\section{Rules of Inference}
+\label{sec:orgd968874}
+\begin{center}
+\begin{tabular}{ll}
+\hline
+Rule & Name\\
+\hline
+\(p \rightarrow q\) & Modus Ponens\\
+\(p\) & \\
+\hline
+\(\therefore \, q\) & \\
+\hline
+\(p \rightarrow q\) & Modus Tolens\\
+\(\lnot q\) & \\
+\hline
+\(\therefore \, \lnot p\) & \\
+\hline
+\(p \rightarrow q\) & Hypothetical Syllogism\\
+\(q \rightarrow r\) & \\
+\hline
+\(\therefore \, p \rightarrow r\) & \\
+\hline
+\(p \lor q\) & Disjunctive Syllogism\\
+\(\lnot p\) & \\
+\hline
+\(\therefore \, q\) & \\
+\hline
+\(p\) & Addition\\
+\hline
+\(\therefore \, p \lor q\) & \\
+\hline
+\(p \land q\) & Simplification\\
+\hline
+\(\therefore \, p\) & \\
+\hline
+\(p\) & Conjunction\\
+\(q\) & \\
+\hline
+\(\therefore \, p \land q\) & \\
+\hline
+\(p \lor q\) & Resolution\\
+\(\not p \lor r\) & \\
+\hline
+\(\therefore \, q \lor r\) & \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{LaTeX}
+\begin{tabular}{|l|l|l|}
+  \hline
+  \emph{Rule of Inference}&\emph{Name}\\\hline
+  \begin{tabular}{ll}
+    &$p \rightarrow q$\\
+    &$p$\\\cline{2-2}
+    $\therefore$&$q$\\
+  \end{tabular}
+\&Modus Ponens$\backslash$\\hline
+\begin{tabular}{ll}
+  &$p \rightarrow q$\\
+  &$\lnot q$\\\cline{2-2}
+  $\therefore$&$\lnot p$\\
+\end{tabular}
+\&Modus Tollens$\backslash$\\hline
+\begin{tabular}{ll}
+  &$p \rightarrow q$\\
+  &$q \rightarrow r$\\\cline{2-2}
+  $\therefore$&$p \rightarrow r$\\
+\end{tabular}
+\&Hypothetical Syllogism$\backslash$\\hline
+\begin{tabular}{ll}
+  &$p \lor q$\\
+  &$\lnot p$\\\cline{2-2}
+  $\therefore$&$q$\\
+\end{tabular}
+\&Disjunctive Syllogism$\backslash$\\hline
+\begin{tabular}{ll}
+  &$p$\\\cline{2-2}
+  $\therefore$&$p \lor q$\\
+\end{tabular}
+\&Addition$\backslash$\\hline
+\begin{tabular}{ll}
+  &$p \land q$\\\cline{2-2}
+  $\therefore$&$p$\\
+\end{tabular}
+\&Simplification$\backslash$\\hline
+\begin{tabular}{ll}
+  &$p$\\
+  &$q$\\\cline{2-2}
+  $\therefore$&$p \land q$\\
+\end{tabular}
+\&Conjunction$\backslash$\\hline
+\begin{tabular}{ll}
+  &$p \lor q$\\
+  &$\lnot p \lor r$\\\cline{2-2}
+  $\therefore$&$q \lor r$\\
+\end{tabular}
+  \&Resolution$\backslash$\\hline
+\end{tabular}
+\end{LaTeX}
+
+\section{Examples}
+\label{sec:orgbdb0b19}
+\subsection{If Jimmy moves to Anchorage, then he will freeze in winter; but if he moves to Augusta, then he will burn up in summer.  Either he will move to Anchorage or Augusta.  Therefore, he will either freeze this winter or burn up next summer.}
+\label{sec:org93d2e19}
+\subsubsection{Choose propositions for translation:}
+\label{sec:org8475ba9}
+a - Jimmy moves to Anchorage.
+g - Jimmy moves to Augusta.
+f - Jimmy freezes next winter.
+b - Jimmy burns up next summer.
+\subsubsection{Translate the givens:}
+\label{sec:orgc69e3d6}
+\(a \rightarrow f\)
+\(g \rightarrow b\)
+\(a \lor g\)
+\subsubsection{Translate the conclusion:}
+\label{sec:org7de33de}
+\(f \lor b\)
+\subsubsection{Prove it}
+\label{sec:org5bad221}
+\begin{center}
+\begin{tabular}{lllr}
+ & \(a \rightarrow f\) & Premise & 1\\
+ & \(g \rightarrow b\) & Premise & 2\\
+ & \(a \lor g\) & Premise & 3\\
+ & \(\lnot a \rightarrow g\) & Material implication, 3 & 4\\
+ & \(\lnot a \rightarrow b\) & Hypothetical Syllogism 2, 4 & 5\\
+ & \(\lnot b \rightarrow a\) & Contrapositive and Double Negative 5 & 6\\
+ & \(\lnot b \rightarrow f\) & HS 1,6 & 7\\
+ & \(b \lor f\) & MI, DN 7 & 8\\
+\(\therefore\) & \(f \lor b\) & Commutation of \(\lor\) 8 & \\
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item Pretty version of the proof in \LaTeX{} block
+\label{sec:orgbda49ce}
+\begin{LaTeX}
+\begin{tabular}{lllr}
+  &$a \rightarrow f$&Premise&1\\
+  &$g \rightarrow b$&Premise&2\\
+  &$a \lor g$&Premise&3\\
+  &$\lnot a \rightarrow g$&Material implication, 3&4\\
+  &$\lnot a \rightarrow b$&Hypothetical Syllogism 2, 4&5\\
+  &$\lnot b \rightarrow a$&Contrapositive and Double Negative 5&6\\
+  &$\lnot b \rightarrow f$&HS 1,6&7\\
+  &$b \lor f$&MI, DN 7&8\\\cline{2-3}
+  $\therefore$&$f \lor b$&Commutation of $\lor$ 8&\\
+\end{tabular}
+\end{LaTeX}
+\end{enumerate}
+
+\section{Fallacies (or Anti-rules of Inference)}
+\label{sec:org886eab3}
+\subsection{[Affirming the Conclusion] If you are a font geek, then you are disappointed with the subtitles in \emph{Avatar}. You are disappointed with the subtitles in \emph{Avatar}. Therefore, you are a font geek.}
+\label{sec:orgb1edd6a}
+
+\subsubsection{Propositions}
+\label{sec:org70604f5}
+g - you are a font geek
+d - you are disappointed with the subtitles
+\subsubsection{Givens}
+\label{sec:orgdbaee70}
+\(g \rightarrow d\)
+\(d\)
+\subsubsection{Conclusion}
+\label{sec:org2347765}
+\(g\)
+\subsubsection{Proof?}
+\label{sec:org5360cda}
+\begin{enumerate}
+\item Equivalent to asking if \(((g \rightarrow d) \land d) \rightarrow g\) is a tautology.
+\label{sec:org610a98b}
+\item Is it?
+\label{sec:org7c4925d}
+\end{enumerate}
+
+\subsection{[Denying the Hypothesis] If you are a true \emph{Star Wars} fan, then you love Jar Jar Binks. You are not a true \emph{Star Wars} fan. Therefore, you hate Jar Jar Binks.}
+\label{sec:org448940d}
+
+\subsubsection{Propositions}
+\label{sec:org7767424}
+s - you are a true \emph{Star Wars} fan
+j - you love Jar Jar Binks
+\subsubsection{Givens}
+\label{sec:orgaa23e9b}
+\(s \rightarrow j\)
+\(\lnot s\)
+\subsubsection{Conclusion}
+\label{sec:orge23270a}
+\(\lnot j\)
+\subsubsection{Valid conclusion?}
+\label{sec:org12cf585}
+
+\section{Example [1.6 35]}
+\label{sec:orgd2710b9}
+\subsection{Is the following argument valid?}
+\label{sec:org34d1030}
+\subsubsection{If Superman were able and willing to prevent evil, he would do so.  If Superman were unable to prevent evil, he would be impotent; if he were unwilling to prevent evil, he would be malevolent. Superman does not prevent evil. If Superman exists, he is neither impotent nor malevolent. Therefore, Superman does not exist.}
+\label{sec:org5874618}
+\begin{enumerate}
+\item Propositions?
+\label{sec:org61fa5d2}
+s - Superman exists
+w - willing to prevent evil
+a - able to prevent evil
+e - Superman prevents evil
+i - Superman is impotent
+m - Superman is malevolent
+\item Givens
+\label{sec:org9c201fc}
+\((w \land a) \rightarrow e\)
+\(\lnot a \rightarrow i\)
+\(\lnot w \rightarrow m\)
+\(\lnot e\)
+\$s \(\rightarrow\) (\lnot i \(\land\) \lnot m)
+\item Conclusion
+\label{sec:org0b503cc}
+\(\lnot s\)
+\item Give a valid proof (or counter example)
+\label{sec:org8cdad5b}
+\end{enumerate}
+
+\section{Inference with quantifiers}
+\label{sec:org1ffcbde}
+\subsection{John is a lawyer. All lawyers are rich. Every person has a house. If a person is rich and they have a house, the house is big. If a person lives in a big house, they have a mortgage. Everyone with a mortgage has to work.  Therefore, John has to work.}
+\label{sec:org581e50e}
+\subsubsection{Predicates}
+\label{sec:org12407ad}
+L(p) - person p is a lawyer
+R(p) - person p is rich
+H(p, h) - person p owns house h
+B(h) - house h is big
+M(p) - person p has a mortgage
+W(p) - person p must work
+\subsubsection{Givens}
+\label{sec:orgf50983e}
+\(L(J)\)
+\(\forall p \in \{People\} \, L(p) \rightarrow R(p)\)
+\(\forall p \in \{People\} \exists h \in \{Houses\} \, H(p,h)\)
+\(\forall p \in \{People\} \forall h \in \{Houses\} (R(p) \land H(p, h) \rightarrow B(h))\)
+\(\forall p \in \{People\} \forall h \in \{Houses\} (H(p, h) \land B(h) \rightarrow M(p))\)
+\(\forall p \in \{People\} \, M(p) \rightarrow W(p)\)
+\subsubsection{Conclusion}
+\label{sec:org78e7139}
+\(W(J)\)
+\end{document}

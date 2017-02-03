@@ -46,11 +46,11 @@ Predicates and Quantifiers
 
 ** Examples
 *** $\forall x (x^2 \ge 0)$   Is this statement T or F?
-**** T if D = $\mathbb{R}.
-**** F if D = $\mathbb{C}
+**** T if D = $\mathbb{R}$.
+**** F if D = $\mathbb{C}$
 
 *** $\forall x (x^2 - 1 > 0)$   Is this statement T or F?
-**** F if D = $\mathbb{Z} or D = $\mathbb{R} because the predicate is false when x = 1.
+**** F if D = $\mathbb{Z}$ or D = $\mathbb{R}$ because the predicate is false when x = 1.
 **** The value x = 1, where the predicate is false, is a /counterexample/ to the quantified statement.
 
 ** Thinking about looping
@@ -92,7 +92,7 @@ Predicates and Quantifiers
 ** Examples
 *** $\exists x ( \frac{x}{x^2 + 1} = \frac{2}{5} )$
     Is this statement true or false?
-**** It is true for D = $\mathbb{Z} because x = 2 is an integer for which the predicate is true.
+**** It is true for D = $\mathbb{Z}$ because x = 2 is an integer for which the predicate is true.
 *** $\exists x \in \mathbb{R} \; ( \frac{1}{x^2 + 1} \ge 1 )$
     Is the statement true or false?
 
@@ -101,7 +101,7 @@ Predicates and Quantifiers
 
 #+begin_src
     for i = 1 to n
-      if ($\lnot P(d_i)$)
+      if ($P(d_i)$)
         return T
     return F
 #+end_src

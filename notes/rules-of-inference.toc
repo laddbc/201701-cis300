@@ -1,0 +1,35 @@
+\contentsline {section}{\numberline {1}Inference}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}We study logic to \emph {use} it to \emph {prove} things.}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}A \emph {proof} is a valid \emph {argument} that starts with a set of \emph {given conditions} and, through the application of valid rewrite rules of inference, \emph {concludes} that which is to be shown.}{1}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}The \emph {rules of inference} are templates for building valid arguments.}{1}{subsection.1.3}
+\contentsline {section}{\numberline {2}Modus Ponens}{1}{section.2}
+\contentsline {subsection}{\numberline {2.1}Consider}{1}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}General Format}{1}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Proof(?)}{1}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}What is wrong with this proof?}{2}{subsubsection.2.3.1}
+\contentsline {section}{\numberline {3}Rules of Inference}{2}{section.3}
+\contentsline {section}{\numberline {4}Examples}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}If Jimmy moves to Anchorage, then he will freeze in winter; but if he moves to Augusta, then he will burn up in summer. Either he will move to Anchorage or Augusta. Therefore, he will either freeze this winter or burn up next summer.}{3}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Choose propositions for translation:}{3}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Translate the givens:}{3}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.3}Translate the conclusion:}{4}{subsubsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.4}Prove it}{4}{subsubsection.4.1.4}
+\contentsline {section}{\numberline {5}Fallacies (or Anti-rules of Inference)}{4}{section.5}
+\contentsline {subsection}{\numberline {5.1}[Affirming the Conclusion] If you are a font geek, then you are disappointed with the subtitles in \emph {Avatar}. You are disappointed with the subtitles in \emph {Avatar}. Therefore, you are a font geek.}{4}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Propositions}{4}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Givens}{4}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}Conclusion}{5}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}Proof?}{5}{subsubsection.5.1.4}
+\contentsline {subsection}{\numberline {5.2}[Denying the Hypothesis] If you are a true \emph {Star Wars} fan, then you love Jar Jar Binks. You are not a true \emph {Star Wars} fan. Therefore, you hate Jar Jar Binks.}{5}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Propositions}{5}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Givens}{5}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}Conclusion}{5}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.4}Valid conclusion?}{5}{subsubsection.5.2.4}
+\contentsline {section}{\numberline {6}Example [1.6 35]}{5}{section.6}
+\contentsline {subsection}{\numberline {6.1}Is the following argument valid?}{5}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}If Superman were able and willing to prevent evil, he would do so. If Superman were unable to prevent evil, he would be impotent; if he were unwilling to prevent evil, he would be malevolent. Superman does not prevent evil. If Superman exists, he is neither impotent nor malevolent. Therefore, Superman does not exist.}{5}{subsubsection.6.1.1}
+\contentsline {section}{\numberline {7}Inference with quantifiers}{6}{section.7}
+\contentsline {subsection}{\numberline {7.1}John is a lawyer. All lawyers are rich. Every person has a house. If a person is rich and they have a house, the house is big. If a person lives in a big house, they have a mortgage. Everyone with a mortgage has to work. Therefore, John has to work.}{6}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Predicates}{6}{subsubsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.2}Givens}{6}{subsubsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.3}Conclusion}{6}{subsubsection.7.1.3}

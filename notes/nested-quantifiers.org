@@ -1,0 +1,30 @@
+#+STARTUP: showall
+
+Nested Quantifiers
+
+* Motivation
+** Consider the statement
+   The sum of any two positive real numbers is positive.
+*** How many numbers are under consideration?
+*** How are the numbers related?
+
+** There are two different /unrelated/ numbers involved, x and y.
+** By statement, $(x > 0) \land (y > 0)$
+
+** There is a non-obvious implication here: /If/ two real numbers are both positive, /then/ there sum is also positive.
+   $(x > 0) \land (y > 0) \rightarrow ((x + y) > 0)$
+*** Is this a /proposition/? Justify your answer.
+
+** Eliminate the free variable(s) in
+   $(x > 0) \land (y > 0) \rightarrow ((x + y) > 0)$
+*** Two variables, two quantifiers
+   $\forall x \in \mathbb{R} \forall y \(x > 0) \land (y > 0) \rightarrow ((x + y) > 0)$
+
+** Translate from English to logic:
+   "Everyone loves somebody."
+*** Define predicates as necessary
+**** L(a, b) ::= a loves b
+*** Think about the other terms:
+**** "everybody" means every single person
+**** "somebody" means there exists a single person
+  $\forall x \exists y \, L(x, y)$
