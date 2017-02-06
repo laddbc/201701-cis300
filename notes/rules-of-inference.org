@@ -63,63 +63,11 @@ Rules of Inference
 | $\therefore \, p \land q$       |                        |
 |---------------------------------+------------------------|
 | $p \lor q$                      | Resolution             |
-| $\not p \lor r$                 |                        |
+| $\lnot p \lor r$                |                        |
 |---------------------------------|                        |
 | $\therefore \, q \lor r$        |                        |
 |---------------------------------+------------------------|
 
-#+BEGIN_LaTeX
-  \begin{tabular}{|l|l|l|}
-    \hline
-    \emph{Rule of Inference}&\emph{Name}\\\hline
-    \begin{tabular}{ll}
-      &$p \rightarrow q$\\
-      &$p$\\\cline{2-2}
-      $\therefore$&$q$\\
-    \end{tabular}
-    &Modus Ponens\\\hline
-    \begin{tabular}{ll}
-      &$p \rightarrow q$\\
-      &$\lnot q$\\\cline{2-2}
-      $\therefore$&$\lnot p$\\
-    \end{tabular}
-    &Modus Tollens\\\hline
-    \begin{tabular}{ll}
-      &$p \rightarrow q$\\
-      &$q \rightarrow r$\\\cline{2-2}
-      $\therefore$&$p \rightarrow r$\\
-    \end{tabular}
-    &Hypothetical Syllogism\\\hline
-    \begin{tabular}{ll}
-      &$p \lor q$\\
-      &$\lnot p$\\\cline{2-2}
-      $\therefore$&$q$\\
-    \end{tabular}
-    &Disjunctive Syllogism\\\hline
-    \begin{tabular}{ll}
-      &$p$\\\cline{2-2}
-      $\therefore$&$p \lor q$\\
-    \end{tabular}
-    &Addition\\\hline
-    \begin{tabular}{ll}
-      &$p \land q$\\\cline{2-2}
-      $\therefore$&$p$\\
-    \end{tabular}
-    &Simplification\\\hline
-    \begin{tabular}{ll}
-      &$p$\\
-      &$q$\\\cline{2-2}
-      $\therefore$&$p \land q$\\
-    \end{tabular}
-    &Conjunction\\\hline
-    \begin{tabular}{ll}
-      &$p \lor q$\\
-      &$\lnot p \lor r$\\\cline{2-2}
-      $\therefore$&$q \lor r$\\
-    \end{tabular}
-    &Resolution\\\hline
-  \end{tabular}
-#+END_LaTeX
 
 * Examples
 ** If Jimmy moves to Anchorage, then he will freeze in winter; but if he moves to Augusta, then he will burn up in summer.  Either he will move to Anchorage or Augusta.  Therefore, he will either freeze this winter or burn up next summer.
@@ -202,7 +150,7 @@ Rules of Inference
      $\lnot a \rightarrow i$
      $\lnot w \rightarrow m$
      $\lnot e$
-     $s \rightarrow (\lnot i \land \lnot m)
+     $s \rightarrow (\lnot i \land \lnot m)$
 **** Conclusion
      $\lnot s$
 **** Give a valid proof (or counter example)
@@ -267,10 +215,10 @@ Rules of Inference
 | $\therefore$ | $B(Q)$                                                     | MP 9,10 | 11 |
 
 *** M(J)
-|            | $\forall p \forall h (H(p,h) \land B(h) \rightarrow M(p))$ | Premise    | 12 |
-|            | $H(J,Q) \land B(Q) \rightarrow M(J)$                       | UI,IE      | 13 |
-|            | $H(J,Q) \land B(Q)$                                        | Conj 7, 10 | 14 |
-| \therefore | $M(J)$                                                     | MP 13, 14  | 15 |
+|              | $\forall p \forall h (H(p,h) \land B(h) \rightarrow M(p))$ | Premise    | 12 |
+|              | $H(J,Q) \land B(Q) \rightarrow M(J)$                       | UI,IE      | 13 |
+|              | $H(J,Q) \land B(Q)$                                        | Conj 7, 10 | 14 |
+| $\therefore$ | $M(J)$                                                     | MP 13, 14  | 15 |
 
 *** W(J)
 |              | $\forall p (M(p) \rightarrow W(p))$ | Premise   | 16 |
@@ -281,7 +229,7 @@ Rules of Inference
 |----------------------------------------------+----------------------------|
 | Rule                                         | Name                       |
 |----------------------------------------------+----------------------------|
-| $\forall x P(x)$                             | Universal Instantiating    |
+| $\forall x P(x)$                             | Universal Instantiation    |
 |----------------------------------------------|                            |
 | $\therefore \, P(c)$ (for any particular c)  |                            |
 |----------------------------------------------+----------------------------|
